@@ -45,8 +45,7 @@ RUN chmod g+rwX /opt/bitnami
 RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
 RUN ln -s /opt/bitnami/scripts/redis/entrypoint.sh /entrypoint.sh
 RUN ln -s /opt/bitnami/scripts/redis/run.sh /run.sh
-USER root
-RUN mkdir -p /bitnami/scripts/redis/postunpack.sh && chown -R 1001:root /bitnami/scripts/redis/postunpack.sh
+
 COPY rootfs /
 RUN /opt/bitnami/scripts/redis/postunpack.sh
 ENV APP_VERSION="7.2.5-1" \
