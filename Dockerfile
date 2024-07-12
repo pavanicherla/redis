@@ -48,7 +48,7 @@ RUN ln -s /opt/bitnami/scripts/redis/run.sh /run.sh
 
 COPY rootfs /
 RUN /opt/bitnami/scripts/redis/postunpack.sh
-ENV APP_VERSION="7.2.5" \
+ENV APP_VERSION="7.2.5-1" \
     BITNAMI_APP_NAME="redis" \
     PATH="/opt/bitnami/common/bin:/opt/bitnami/redis/bin:$PATH"
 
